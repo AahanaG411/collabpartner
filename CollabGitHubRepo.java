@@ -29,9 +29,9 @@ public class CollabGitHubRepo
 
 	public static int arrTasks(int[][] arr)
 	{
-		for (int j = 0; j < arr[0].length; j++)
-			for (int i = 0; i < arr.length; i++)
-				if (arr[i][j] % 2 == 0)
+		for (int i = 0; i < arr.length; i++)
+			for (int j = 0; j < arr[0].length; j++)
+				if ((i - 1) >= 0 && (i + 1) < arr.length && ((arr[i - 1][j] + arr[i + 1][j]) > 17))
 					return arr[i][j];
 		return -1;
 	}
