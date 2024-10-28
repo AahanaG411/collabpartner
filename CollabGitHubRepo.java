@@ -23,5 +23,16 @@ public class CollabGitHubRepo
 			}
 				System.out.println();
 		}
+
+		System.out.println(arrTasks(arr));
+	}
+
+	public static int arrTasks(int[][] arr)
+	{
+		for (int j = 0; j < arr[0].length; j++)
+			for (int i = 0; i < arr.length; i++)
+				if (arr[i][j] % 2 == 0)
+					return arr[i][j];
+		return -1;
 	}
 }
